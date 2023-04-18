@@ -37,6 +37,32 @@ export const networkConfigs = {
       portisDappId ? { id: 'portis', conf: portisDappId } : null,
     ].filter(p => p),
   },
+  pulsechain: {
+    addresses: {
+      ensRegistry:
+        localEnsRegistryAddress || '0x801e1d8C79504700529a68388481186412c63ECa',
+    },
+    nodes: {
+      defaultEth: 'wss://ws.v3.testnet.pulsechain.com',
+    },
+    settings: {
+      chainId: 942,
+      name: 'Pulsechain',
+      shortName: 'Pulse',
+      type: 'pulsechain', // as returned by web3.eth.net.getNetworkType()
+      live: true,
+    },
+    providers: [
+      { id: 'provided' },
+      { id: 'frame' },
+      {
+        id: 'walletconnect',
+        conf: getWalletConnectRpcUrl() || 'https://mainnet.eth.aragon.network',
+      },
+      fortmaticApiKey ? { id: 'fortmatic', conf: fortmaticApiKey } : null,
+      portisDappId ? { id: 'portis', conf: portisDappId } : null,
+    ].filter(p => p),
+  },
   rinkeby: {
     addresses: {
       ensRegistry:

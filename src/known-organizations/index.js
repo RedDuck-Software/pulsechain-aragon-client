@@ -30,14 +30,14 @@ const TEMPLATE_DANDELION = 'Dandelion'
 export const KnownOrganizations = {
   main: new Map(
     [
-      {
-        address: '0xb8FFC3Cd6e7Cf5a098A1c92F48009765B24088Dc',
-        domain: 'lido-dao.aragonid.eth',
-        image: lidoImage,
-        name: 'Lido',
-        template: TEMPLATE_COMPANY,
-        recommended: true,
-      },
+      // {
+      //   address: '0xb8FFC3Cd6e7Cf5a098A1c92F48009765B24088Dc',
+      //   domain: 'lido-dao.aragonid.eth',
+      //   image: lidoImage,
+      //   name: 'Lido',
+      //   template: TEMPLATE_COMPANY,
+      //   recommended: true,
+      // },
       {
         address: '0xF47917B108ca4B820CCEA2587546fbB9f7564b56',
         domain: 'dcl.eth',
@@ -243,6 +243,18 @@ export const KnownOrganizations = {
       {
         address: '0x1dD91b354Ebd706aB3Ac7c727455C7BAA164945A',
         domain: 'lido-testnet-prater.aragonid.eth',
+        image: lidoImage,
+        name: 'Lido',
+        template: TEMPLATE_COMPANY,
+        recommended: true,
+      },
+    ].map(org => [org.address.toLowerCase(), org])
+  ),
+  pulsechain: new Map(
+    [
+      {
+        address: '0x62DD2A09cEc9E0e6b4187Bb914503e9584c50093',
+        domain: 'lido-dao.aragonid.eth',
         image: lidoImage,
         name: 'Lido',
         template: TEMPLATE_COMPANY,

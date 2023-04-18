@@ -1,5 +1,10 @@
 {
   "environments": {
+    "pulsechain": {
+      "registry": "0x801e1d8C79504700529a68388481186412c63ECa",
+      "appName": "aragon.aragonpm.eth",
+      "network": "pulsechain"
+    },
     "default": {
       "registry": "0x5f6f7e8cc7346a11ca2def8f827b7a0b612c56a1",
       "appName": "aragon.aragonpm.eth",
